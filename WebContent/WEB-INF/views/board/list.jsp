@@ -38,14 +38,12 @@
 							<td>${vo.memberName }</td>
 							<td>${vo.viewCount }</td>
 							<td>${vo.regdate }</td>
-							<td><c:choose>
-									<c:when test='${authUser.no == vo.memberNo }'>
-										<a href="/mysite/board?a=delete&no=${vo.no }" class="del">삭제</a>
-									</c:when>
-									<c:otherwise>
-										&nbsp;
-									</c:otherwise>
-								</c:choose></td>
+							<td><c:if test='${authUser.no == vo.memberNo }'>
+
+									<a href="/mysite/board?a=delete&no=${vo.no }" class="del">
+										<img id="recycle" src="/mysite/assets/images/recycle.png">
+									</a>
+								</c:if></td>
 						</tr>
 					</c:forEach>
 
