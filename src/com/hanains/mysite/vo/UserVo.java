@@ -39,9 +39,5 @@ public class UserVo {
 		this.gender = gender;
 	}
 	
-	@Override
-	public String toString() {
-		return "MemberVo [no=" + no + ", name=" + name + ", email=" + email
-				+ ", password=" + password + ", gender=" + gender + "]";
-	}
+	
 }

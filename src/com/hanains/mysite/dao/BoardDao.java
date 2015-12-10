@@ -203,12 +203,16 @@ public class BoardDao {
 			pstmt.setString( 2, vo.getContent() );
 			pstmt.setLong( 3, vo.getMemberNo() );
 			
+			System.out.println(vo.getTitle() + vo.getContent() + vo.getMemberNo());
+			
 			//4. query 실행
 			pstmt.executeUpdate();
 			
 			//5. 자원정리
 			pstmt.close();
 			connection.close();
+			
+			
 			
 		} catch( SQLException ex ) {
 			System.out.println( "SQL 오류-" + ex );

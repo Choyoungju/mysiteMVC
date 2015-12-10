@@ -25,12 +25,18 @@ public class InsertAction implements Action {
 			HttpUtil.redirect( response, "/mysite/main" );
 			return;
 		}
+		
+		
 		UserVo memberVo = (UserVo)session.getAttribute( "authUser" );
 
-		Long memberNo = memberVo.getNo();
+		
 		String title = request.getParameter( "title" );
+		
 		String content = request.getParameter( "content" );
-
+		
+		
+		Long memberNo = memberVo.getNo();
+		
 		BoardVo vo = new BoardVo();
 		vo.setTitle(title);
 		vo.setContent( content );
